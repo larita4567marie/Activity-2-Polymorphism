@@ -19,7 +19,7 @@ public class Main {
         Truck truck = new Truck("Isuzu", "Giga", 2018, 12.5);
         Printer printer = new Printer();
 
-       
+        // One interface type, four different implementing classes
         Serviceable[] serviceables = {car, motorcycle, truck, printer};
 
         System.out.println("=== Service (Serviceable[]) ===");
@@ -29,13 +29,17 @@ public class Main {
 
         System.out.println();
 
-        
+        // The abstract Vehicle still works
         Vehicle[] vehicles = {car, motorcycle, truck};
 
         System.out.println("=== Vehicles (Vehicle[]) ===");
         for (Vehicle v : vehicles) {
             v.displayInfo();
             v.move();
+            v.moveForward();
+            v.turnLeft();
+            v.turnRight();
+            v.moveReverse();
             System.out.println();
         }
     }
