@@ -26,6 +26,15 @@ public abstract class Vehicle {
     public void displayInfo() {
         System.out.println("Brand: " + brand + ", Model: " + model + ", Year: " + year);
     }
-    
+
+    // Abstract: every subclass must provide its own version
     public abstract void move();
+
+    public abstract void moveForward();
+
+    public abstract void moveReverse();
+
+    public abstract void turnLeft();
+
+    public abstract void turnRight();
 }
